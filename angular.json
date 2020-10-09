@@ -119,6 +119,46 @@
           }
         }
       }
+    },
+    "mergeImage": {
+      "projectType": "library",
+      "root": "projects/merge-image",
+      "sourceRoot": "projects/merge-image/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/merge-image/tsconfig.lib.json",
+            "project": "projects/merge-image/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/merge-image/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/merge-image/src/test.ts",
+            "tsConfig": "projects/merge-image/tsconfig.spec.json",
+            "karmaConfig": "projects/merge-image/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/merge-image/tsconfig.lib.json",
+              "projects/merge-image/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "image"
 }
