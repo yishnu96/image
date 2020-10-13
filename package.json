@@ -21,9 +21,11 @@
     "@angular/router": "~10.1.4",
     "canvas": "^2.6.1",
     "file-saver": "^2.0.2",
+    "jquery": "^3.5.1",
     "merge-images": "^2.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "tui-code-snippet": "^2.3.2",
     "tui-image-editor": "^3.10.0",
     "zone.js": "~0.10.2"
   },
